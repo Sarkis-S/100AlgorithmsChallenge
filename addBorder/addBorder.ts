@@ -8,23 +8,12 @@ function addBorder(picture: string[]): string[] {
   // Bottom border: If picture is last element in array, create closing bottom border similar to top.
 
   let output = [];
-  let pictureLength = picture[0].length;
-  
-  // Find length of largest picture
-  for (let i = 0; i < picture.length; i++) {
-    let tempCount = 0;
-
-    for (let j = 0; j < picture[i].length; j++) {
-      tempCount++;
-      (tempCount > pictureLength) ? (pictureLength = tempCount) : (pictureLength = pictureLength);
-    }
-  }
+  let pictureLength = picture[0].length + 2;
 
   // Create top frame
-  let topLength = pictureLength + 2;
   let topFrame = '';
 
-  for (let k = 0; k < topLength; k++) {
+  for (let i = 0; i < pictureLength; i++) {
     topFrame += '*';
   }
   output.push(topFrame);
@@ -41,10 +30,9 @@ function addBorder(picture: string[]): string[] {
   }
 
   // Create bottom frame
-  let bottomFrame = '';
-  let bottomLength = pictureLength + 2;
+  let bottomFrame = '';;
 
-  for (let i = 0; i < bottomLength; i++) {
+  for (let i = 0; i < pictureLength; i++) {
     bottomFrame += '*';
   }
   output.push(bottomFrame);
