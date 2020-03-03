@@ -40,4 +40,38 @@ function addBorder(picture: string[]): string[] {
   return output;
 }
 
+// Another shortened solution
+function addBorder(picture: string[]): string[] {
+  const pictureLength = picture[0].length + 2;
+  let border = '';
+
+  for (let i = 0; i < pictureLength; i++) {
+    border += '*';
+  }
+
+  picture.unshift(border);
+  picture.push(border);
+
+  for (let i = 1; i < pictureLength - 1; i++) {
+    picture[i] = '*' + picture[i] + '*';
+  }
+
+  return picture;
+}
+
+// Cleaned up solution
+function addBorder(picture: string[]): string[] {
+  const border = '*'.repeat(picture.length + 2);
+
+  picture.unshift(border);
+  picture.push(border);
+
+  for (let i = 1; i < border - 1; i++) {
+    picture[i] = '*' + picture[i] + '*';
+  }
+
+  return picture;
+}
+
+
 console.log(addBorder(["abc", "ded"]));
