@@ -5,9 +5,9 @@ function adjacentElementsProduct(inputArray: number[]): number {
       // Set that product to output variable
   // return the output once process is complete
 
-  let output = 0;
+  let output = inputArray[0] * inputArray[1];
 
-  for (let i = 0; i < inputArray.length; i++) {
+  for (let i = 1; i < inputArray.length - 1; i++) {
     let current = inputArray[i];
     let next = inputArray[i+1];
     let product = current * next;
