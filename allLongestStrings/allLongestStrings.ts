@@ -30,4 +30,23 @@ function allLongestStrings(inputArray: string[]): string[] {
   return output;
 }
 
+// Using higher order function and ternary operator for clean up
+function allLongestStrings(inputArray: string[]): string[] {
+  let longestLength = 0;
+  let longestWords = [];
+
+  inputArray.forEach((word: string) => {
+    longestLength = (word.length > longestLength) ? word.length : longestLength;
+  });
+
+  inputArray.forEach((word: string) => {
+    if (word.length === longestLength) {
+      longestWords.push(word);
+    }
+  });
+
+  return longestWords;
+}
+
+
 console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
