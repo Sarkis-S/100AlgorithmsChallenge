@@ -41,8 +41,35 @@ function alphabetSubsequence(s: string): boolean {
       return false;
     }
   }
-  
+
   // otherwise return true
+  return true;
+}
+
+// Slightly better solution
+function alphabetSubsequence(s: string): boolean {
+  const chars: string[] = s.split('');
+  const charValues: number[] = [];
+
+  // The charCodeAt() method returns an integer between 0 and 65535
+  // representing the UTF-16 code unit at the given index.
+  chars.forEach((char: string) => {
+    charValues.push(char.charCodeAt(0));
+  });
+
+  // The size accessor property returns the number of (unique) elements in a Set object.
+  // In other words, size property will ignore duplicates.
+  if (new Set(charValues).size !== charValues.length) {
+    return false;
+  }
+
+  // Checks for characters that aren't exactly in ascending order
+  for (let i = 0; i < charValues.length; i++) {
+    if (charValues[i] >= charValues[i+1]) {
+      return false;
+    }
+  }
+
   return true;
 }
 
