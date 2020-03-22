@@ -33,7 +33,7 @@ function arrayConversion(inputArray: number[]): number {
 }
 
 // Helper function
-function evenOdd (nums: number[], iteration: boolean): number[] {
+function evenOdd (nums: number[], iteration: number): number[] {
   const newArray: number[] = [];
 
   if (iteration % 2 === 1) {
