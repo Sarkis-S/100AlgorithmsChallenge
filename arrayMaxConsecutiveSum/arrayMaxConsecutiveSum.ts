@@ -46,7 +46,6 @@ function arrayMaxConsecutiveSum(inputArray: number[], k: number): number {
   for (let i = 0; i < k; i++) {
     sum += inputArray[i];
   }
-  console.log(sum);
 
   for (let i = k; i < inputArray.length; i++) {
     sum -= inputArray[i - k];
