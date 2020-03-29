@@ -11,7 +11,6 @@ function avoidObstacles(inputArray: number[]): number {
 
   inputArray = inputArray.sort((a, b) => { return a - b });
   const largestValue = inputArray[inputArray.length - 1];
-  console.log(largestValue);
   
   // Bad convention possibly?
   for (let i = 1; i <= largestValue + 1; i++) {
