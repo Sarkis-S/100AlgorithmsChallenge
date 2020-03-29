@@ -24,10 +24,10 @@ function avoidObstacles(inputArray: number[]): number {
 function avoidObstacles(inputArray: number[]): number {
   let jump = 1;
  
-  while(true) {
+  while (true) {
     let flag = true;
 
-    for(let i = 0; i < inputArray.length; i++) {
+    for (let i = 0; i < inputArray.length; i++) {
       if (inputArray[i] % jump === 0) {
         flag = false;
       }
