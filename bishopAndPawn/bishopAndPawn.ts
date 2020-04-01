@@ -27,7 +27,7 @@ function bishopAndPawn(bishop: string, pawn: string): boolean {
   const pawnX = board[pawn[0]];
   const pawnY = parseInt(pawn[1]);
 
-  if (bishopX + bishopY === pawnX + pawnY || bishopX + pawnY === pawnX + bishopY) {
+  if (bishopX + bishopY === pawnX + pawnY || bishopX + pawnX === bishopY + pawnY) {
     return true;
   }
 
@@ -35,3 +35,5 @@ function bishopAndPawn(bishop: string, pawn: string): boolean {
 }
 
 console.log(bishopAndPawn('a1', 'c3')); // true
+console.log(bishopAndPawn('a1', 'e5')); // true
+console.log(bishopAndPawn('a1', 'g6')); // false
