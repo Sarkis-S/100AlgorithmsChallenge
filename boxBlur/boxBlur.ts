@@ -19,6 +19,8 @@ function boxBlur(image: number[][]): number[][] {
 
             // Create loops to target y-axis values
                 // Create another loop to target x values within the y-axis
+                // Apply Math.floor to our calculation then push to a line constant
+                // The line constant gets pushed into the ouput
 
     // return  output resolution
 
