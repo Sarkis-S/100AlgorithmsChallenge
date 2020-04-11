@@ -12,7 +12,8 @@ function checkPalindrome(inputString: string): boolean {
       // Proceed with loop until finished
     // return true if no no mismatch found
 
-  let reversed = inputString.split('');
+  let reversed = inputString.split('').reverse();
+
   let shifted = '';
   let popped = '';
 
