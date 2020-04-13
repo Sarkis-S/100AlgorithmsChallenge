@@ -1,17 +1,12 @@
 function chunkyMonkey(inputArray: any[], size: number): any[][] {
   // So we're split the inputArray into "size" numnber of arrays. Simple enough. Seems we don't need to worry about odd-numbered sizes.
 
+  // Ended up refactoring for simpler approach
   // Create an output array
 
-    // Loop through inputArray
-      // Create temp array
-      // Initialize size flag to zero
-
-      // Push current element into temp array
-      // Up size flag count
-      // If size flag count is equal to size
-        // Push temp array to output array
-
+  // Loop through inputArray
+    // Take a slice of inputArray in "size"-size
+      // Push that into the output
   // Return output array
 
   let output = [];
