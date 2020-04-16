@@ -16,25 +16,41 @@ function circleOfNumbers(n: number, firstNumber: number): number {
     // Where it stops we take the index of that number
       // Then explicitly return the index value of the second array
 
-  let array1 = [];
-  let array2 = [];
+  // let array1 = [];
+  // let array2 = [];
 
-  const nLength = n; // We cannot mutate n
-  const newN = nLength / 2;
+  // const nLength = n; // We cannot mutate n
+  // const newN = nLength / 2;
 
-  for (let i = 0; i < newN; i++) {
-    array1.push(i);
+  // for (let i = 0; i < newN; i++) {
+  //   array1.push(i);
+  // }
+
+  // for (let j = newN; j < n; j++) {
+  //   array2.push(j);
+  // }
+
+  // for (let k = 0; k < n; k++) {
+  //   if (k === firstNumber) {
+  //     return array2[k];
+  //   }
+  // }
+
+  // Let's refactor and simplify
+  let numberArray = [];
+  const halfwayPoint = n / 2;
+
+  for (let i = 0; i < n; i++) {
+    numberArray.push(i);
   }
 
-  for (let j = newN; j < n; j++) {
-    array2.push(j);
+  if (firstNumber < halfwayPoint) {
+    return numberArray[halfwayPoint + firstNumber];
   }
 
-  for (let k = 0; k < n; k++) {
-    if (k === firstNumber) {
-      return array2[k];
-    }
-  }
+  return numberArray[firstNumber - halfwayPoint];
 }
 
 console.log(circleOfNumbers(10, 2)); // 7
+console.log(circleOfNumbers(10, 4)); // 9
+console.log(circleOfNumbers(10, 8)); // 3
