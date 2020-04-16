@@ -3,10 +3,14 @@ function commonCharacterCount(s1: string, s2: string): number {
   // Repeat for s2
   // Initialize commonCharacter variable to zero
 
+  // Create an tracker object to store s2's count of characters
+  // Use loops to accomplish this
+
   // Loop through s1 array
     // For the current element
-      // Does string2 have that element?
+      // Does the tracker have that element?
         // If yes, up count
+        // Lower the count in the tracker for said character
   
   // Return commonCharacter
 
