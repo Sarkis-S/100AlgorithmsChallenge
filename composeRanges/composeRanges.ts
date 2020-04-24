@@ -24,12 +24,15 @@ function composeRanges(nums: number[]): string[] {
   
   // Going into the nums array
   for (let i = 1; i < nums.length; i++) {
-    if (nums[i] === nums[i - 1] + 1) {
-      start.push(nums[i]);
-    } else if (nums[i] !== nums[i - 1] + 1 ) {
+    let current = nums[i];
+    let previous = nums[i - 1];
+
+    if (current === previous + 1) {
+      start.push(current);
+    } else if (current !== previous + 1 ) {
       output.push(`${start[0]}->${start[start.length - 1]}`);
       start = [];
-      start.push(nums[i]);
+      start.push(current);
     }
   }
   
