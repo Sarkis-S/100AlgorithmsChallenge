@@ -20,15 +20,15 @@ function containsDuplicates(a: number[]): boolean {
     if (!dupTracker[a[i]]) {
       dupTracker[a[i]] = 1;
     } else {
-      dupTracker[a[i]]++;
-    }
-  }
-
-  for (let key in dupTracker) {
-    if (dupTracker[key] > 1) {
       return true;
     }
   }
+
+  // for (let key in dupTracker) {
+  //   if (dupTracker[key] > 1) {
+  //     return true;
+  //   }
+  // }
 
   return false;
 }
