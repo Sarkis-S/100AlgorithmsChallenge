@@ -17,21 +17,36 @@ function convertString(s: string, t: string): boolean {
   // if they are the same return true
   // return false
 
-  let splitS = s.split('');
-  let splitT = t.split('');
-  let compare: string[] = [];
+  // let splitS = s.split('');
+  // let splitT = t.split('');
+  // let compare: string[] = [];
 
-  for (let i = 0; i < splitT.length; i++) {
-    for (let j = 0; j < splitS.length; j++) {
-      if (splitT[i] === splitS[j]) {
-        compare.push(splitS[j]);
-        splitS.shift();
-        break;
-      }
+  // for (let i = 0; i < splitT.length; i++) {
+  //   for (let j = 0; j < splitS.length; j++) {
+  //     if (splitT[i] === splitS[j]) {
+  //       compare.push(splitS[j]);
+  //       splitS.shift();
+  //       break;
+  //     }
+  //   }
+  // }
+
+  // return (compare.join('') === t) ? true : false;
+
+
+
+  // Let's try to avoid nested loops
+  let compare = '';
+  let tIndex = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === t[tIndex]) {
+      compare += s[i];
+      tIndex++;
     }
   }
 
-  return (compare.join('') === t) ? true : false;
+  return (compare === t) ? true : false;
 }
 
 console.log(convertString('ceoydefthf5iyg5h5yts', 'codefights')); // true
