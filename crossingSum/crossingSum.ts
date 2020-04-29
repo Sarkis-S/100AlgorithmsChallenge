@@ -28,20 +28,21 @@
 // return output
 
 function crossingSum(matrix: number[][], a: number, b: number): number {
-  let output = 0;
+  let output = matrix[a].reduce((a, b) =>  a + b );
+
+//   matrix.forEach((element, index) => {
+//     if (index === a) {
+//       output = element.reduce((a, b) => {
+//         return a + b;
+//       });
+//     }
+//   });
 
   matrix.forEach((element, index) => {
-    if (index === a) {
-      output = element.reduce((a, b) => {
-        return a + b;
-      });
-    }
-  });
-
-  matrix.forEach((element, index) => {
-    if (index !== a) {
-      output += element[b];
-    }
+    output += (index !== a) ? element[b]: 0;
+    // if (index !== a) {
+    //   output += element[b];
+    // }
   });
 
   return output;
