@@ -6,7 +6,7 @@
 
 // 'a'th row vs 'b'th column (zero-based):
 // So we're taking row 1 ([2, 2, 2, 2])
-// then adding column 1 from column 3
+// then adding 1 from column 3
 // with 3 from column 3
 // We skipped 2 because it's already added from row 1
 
