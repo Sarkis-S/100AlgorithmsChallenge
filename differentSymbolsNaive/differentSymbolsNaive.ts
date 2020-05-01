@@ -12,18 +12,14 @@ function differentSymbolsNaive(s: string): number {
   
   // Return the count
 
-  let count = 0;
   let char = {}
   let strArray = s.split('');
 
   strArray.forEach((character) => {
-    if (!char[character]) {
-      char[character] = 1;
-      count++;
-    }
+    char[character] = 1;
   });
   
-  return count;
+  return Object.keys(char).length;
 }
 
 console.log(differentSymbolsNaive('cabca')); // 3
