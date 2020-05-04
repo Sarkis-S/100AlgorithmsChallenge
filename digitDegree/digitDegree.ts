@@ -18,15 +18,15 @@
     
 
 function digitDegree(n: number): number {
-  let numStr: string[] = n.toString().split('');
+  let numStr: number[] = n.toString().split('').map((element) => parseInt(element));
   let count = 0;
 
   while (numStr.length > 1) {
     numStr = numStr.reduce((a, b) => {
-      return parseInt(a) + parseInt(b);
+      return a + b;
     });
 
-    numStr = numStr.toString().split('');
+    numStr = numStr.toString().split('').map((element) => parseInt(element));
 
     count++;
   }
