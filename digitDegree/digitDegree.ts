@@ -18,7 +18,7 @@
     
 
 function digitDegree(n: number): number {
-  let numStr: number[] = n.toString().split('').map((element) => parseInt(element));
+  let numStr: any[] = n.toString().split('').map((element) => parseInt(element));
   let count = 0;
 
   while (numStr.length > 1) {
