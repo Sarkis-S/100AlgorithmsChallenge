@@ -15,6 +15,9 @@ function encloseInBrackets(inputString: string): string {
   newString.push(')');
 
   return newString.join('');
+
+  // ES6 solution
+  // return `(${inputString})`;
 }
 
 console.log(encloseInBrackets('abacaba'));
