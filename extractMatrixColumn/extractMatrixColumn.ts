@@ -1,13 +1,7 @@
 function extractMatrixColumn(matrix: number[][], column: number): number[] {
-  let output = [];
+  let output: number[] = [];
 
-  matrix.forEach(array => {
-    for (let i = 0; i < array.length; i++) {
-      if (i === column) {
-        output.push(array[i]);
-      }
-    }
-  });
+  matrix.forEach(array => output.push(array[column]));
 
   return output;
 }
