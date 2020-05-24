@@ -8,16 +8,34 @@
 // Rinse and repeat
 
 function factorializeANumber(num: number): number {
-  let count = num;
+  // let count = num;
 
-  let factorial = count;
+  // let factorial = count;
 
-  while (count > 1) {
-    factorial = (factorial * (count - 1));
-    count --;
+  // while (count > 1) {
+  //   factorial = (factorial * (count - 1));
+  //   count --;
+  // }
+
+  // return factorial;
+
+
+
+  /**
+   * Recursion Solution
+   */
+
+  // Now let's use recursion because we absolutely enjoy complexity
+  // and some believe it to be quite 'sexy'
+
+  // Loop stop condition
+  if (num === 0) {
+    return 1;
+  } else {
+    // Actual calculation
+    return num * factorializeANumber(num - 1);
   }
 
-  return factorial;
 }
 
 console.log(factorializeANumber(5)); // 120
